@@ -18,7 +18,7 @@ nltk.download('words', download_dir=nltk_data_dir)
 nltk.download('punkt', download_dir=nltk_data_dir)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ["http://localhost:3000/"]}}) # Initialize CORS
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000"]}}) # Initialize CORS
 
 
 # Route to get all items
