@@ -4,7 +4,7 @@
 from flask import Flask, jsonify, request
 # import nltk
 # from nltk.corpus import words
-from flask_cors import CORS
+# from flask_cors import CORS
 # from language_tool_python import LanguageTool
 # from nltk.tokenize import sent_tokenize
 
@@ -12,7 +12,7 @@ from flask_cors import CORS
 # nltk.download('punkt')
 app = Flask(__name__)
 
-CORS(app)
+# CORS(app)
 
 
 # Route to get all items
