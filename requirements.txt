@@ -3,3 +3,4 @@ nltk
 language_tool_python
 setuptools
 wheel
+flask_cors
