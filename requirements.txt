@@ -1,3 +1,5 @@
 Flask
 nltk
 language_tool_python
+setuptools
+wheel
