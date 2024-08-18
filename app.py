@@ -22,7 +22,7 @@ def get_items():
     return jsonify({"id": 1, "name": "Item 1"})
 
 @app.route('/yourname', methods=['GET'])
-def get_items():
+def get_name():
     print("hello")
     return "Nitin Singh"
 
