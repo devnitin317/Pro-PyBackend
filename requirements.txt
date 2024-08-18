@@ -1,1 +1,5 @@
 Flask
+nltk
+flask_cors
+language_tool_python
+nltk.tokenize
