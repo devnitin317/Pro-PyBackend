@@ -1,11 +1,22 @@
-
+import os
 from flask import Flask, jsonify, request
 import nltk
 from language_tool_python import LanguageTool
 from nltk.tokenize import sent_tokenize
 
-nltk.download('words')
-nltk.download('punkt')
+
+# Define the project directory and NLTK data directory
+project_dir = os.path.dirname(os.path.abspath(__file__))
+nltk_data_dir = os.path.join(project_dir, 'nltk_data')
+
+# Create the NLTK data directory if it doesn't exist
+os.makedirs(nltk_data_dir, exist_ok=True)
+os.environ['NLTK_DATA'] = nltk_data_dir
+
+# Download NLTK data
+nltk.download('words', download_dir=nltk_data_dir)
+nltk.download('punkt', download_dir=nltk_data_dir)
+
 app = Flask(__name__)
 
 
@@ -61,6 +72,7 @@ def check_grammar_with_languagetool(text):
 
 if __name__ == '__main__':
     app.run(port=1234,debug=True)
+
 
 
 
